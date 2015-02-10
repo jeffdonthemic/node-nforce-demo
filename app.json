@@ -1,0 +1,7 @@
+{
+  "name": "NodeJS Demo for Saleforce with nforce and async",
+  "description": "Simple node.js application for CRUDing salesforce.com Accounts using nforce and async.",
+  "repository": "https://github.com/jeffdonthemic/node-nforce-demo",
+  "logo": "",
+  "keywords": ["node", "salesforce", "nforce"]
+}
