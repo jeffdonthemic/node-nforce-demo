@@ -1,7 +1,22 @@
 {
   "name": "NodeJS Demo for Saleforce",
-  "description": "Simple node.js application for CRUDing salesforce.com Accounts using nforce and async.",
+  "description": "Simple NodeJS application for CRUDing salesforce.com Accounts using nforce.",
   "repository": "https://github.com/jeffdonthemic/node-nforce-demo",
+  "website": "http://blog.jeffdouglas.com",
   "logo": "https://raw.githubusercontent.com/jeffdonthemic/node-nforce-demo/master/public/images/salesforce-logo.png",
-  "keywords": ["node", "salesforce", "nforce"]
+  "keywords": ["node", "salesforce", "nforce"],
+  "env": {
+    "USERNAME": {
+      "description": "Your Saleforce.com username"
+    },
+    "PASSWORD": {
+      "description": "Your Saleforce.com password."
+    },
+    "CLIENT_ID": {
+      "description": "Your Connected App's Consumer Key."
+    },
+    "CLIENT_SECRET": {
+      "description": "Your Connected App's Consumer Secret."
+    }
+  }
 }
