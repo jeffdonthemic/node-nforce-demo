@@ -1,12 +1,20 @@
 # node-nforce-demo
 
-Simple node.js application for CRUDing salesforce.com Accounts using nforce and async.
+Simple node.js application for CRUDing salesforce.com Accounts using nforce.
 
-## Installation Instructions
+## Deploy to Heroku
+
+Deploy this app to Heroku for free and have it up and running in a matter of minutes.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-sample)
+
+## Local Installation Instructions
 
 From the command line type in:
 
 ```
+git clone git@github.com:jeffdonthemic/node-nforce-demo.git
+cd nforce-node-demo
 npm install
 ```
 

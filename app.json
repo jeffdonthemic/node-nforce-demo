@@ -10,7 +10,7 @@
       "description": "Your Saleforce.com username"
     },
     "PASSWORD": {
-      "description": "Your Saleforce.com password."
+      "description": "Your Saleforce.com password and security token."
     },
     "CLIENT_ID": {
       "description": "Your Connected App's Consumer Key."
