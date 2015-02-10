@@ -6,7 +6,7 @@ Simple node.js application for CRUDing salesforce.com Accounts using nforce.
 
 Deploy this app to Heroku for free and have it up and running in a matter of minutes.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/heroku/node-js-sample)
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jeffdonthemic/node-nforce-demo)
 
 ## Local Installation Instructions
 
