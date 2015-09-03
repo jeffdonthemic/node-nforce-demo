@@ -1,0 +1,231 @@
+<nav class="slds-p-bottom--medium" role="navigation">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="/">Salesforce Lightning Design System Web Demo</a></li>
+  </ol>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="slds-page-header" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+          </svg>
+        </div>
+
+        <div class="slds-media__body">
+          <p class="slds-text-heading--label">Account</p>
+          <h1 class="slds-text-heading--medium">{{get record 'Name'}}</h1>
+        </div>
+
+      </div>
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+    <!-- / PAGE HEADER / ROW 1 / COLUMN 1 -->
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 2 -->
+    <div class="slds-col slds-no-flex slds-align-middle">
+      <div class="slds-button-group" role="group">
+        <a class="slds-button slds-button--neutral" href="/{{get record 'Id'}}/edit">Edit</a>
+        <a class="slds-button slds-button--neutral" href="/{{get record 'Id'}}/delete">Delete</a>
+      </div>
+    </div>
+    <!-- / PAGE HEADER / ROW 1 / COLUMN 2 -->
+
+  </div>
+  <!-- / PAGE HEADER TOP ROW -->
+
+  <!-- PAGE HEADER DETAIL ROW -->
+  <div class="slds-grid slds-page-header__detail-row">
+
+    <!-- PAGE HEADER / ROW 2 / COLUMN 1 -->
+    <div class="slds-col--padded slds-size--1-of-4">
+      <dl>
+        <dt>
+          <p class="slds-text-heading--label slds-truncate">Description</p>
+        </dt>
+        <dd>
+          <p class="slds-text-body--regular slds-truncate">{{get record 'Description'}}</p>
+        </dd>
+      </dl>
+    </div>
+
+    <!-- PAGE HEADER / ROW 2 / COLUMN 2 -->
+    <div class="slds-col--padded slds-size--1-of-4">
+      <dl>
+        <dt>
+          <p class="slds-text-heading--label slds-truncate">Account Number</p>
+        </dt>
+        <dd>{{get record 'AccountNumber'}}</dd>
+      </dl>
+    </div>
+
+    <!-- PAGE HEADER / ROW 2 / COLUMN 3 -->
+    <div class="slds-col--padded slds-size--1-of-4">
+      <dl>
+        <dt>
+          <p class="slds-text-heading--label slds-truncate">Industry</p>
+        </dt>
+        <dd>{{get record 'Industry'}}</dd>
+      </dl>
+    </div>
+
+    <!-- PAGE HEADER / ROW 2 / COLUMN 4 -->
+    <div class="slds-col--padded slds-size--1-of-4">
+      <dl>
+        <dt>
+          <p class="slds-text-heading--label slds-truncate">Type</p>
+        </dt>
+        <dd>{{get record 'Type'}}</dd>
+      </dl>
+    </div>
+
+  </div>
+  <!-- / PAGE HEADER DETAIL ROW -->
+
+</div>
+<!-- / PAGE HEADER -->
+
+<!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp">
+
+  <!-- RELATED LIST CARDS-->
+
+  <div class="slds-grid slds-m-top--large">
+
+<!-- MAIN CARD -->
+<div class="slds-col slds-col-rule--right slds-p-right--large slds-size--8-of-12">
+
+  <div class="slds-card">
+
+    <header class="slds-card__header slds-grid">
+      <div class="slds-col slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact slds-icon--small">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <h3 class="slds-text-heading--small">Contacts</h3>
+        </div>
+      </div>
+      <div class="slds-col slds-no-flex">
+        <button class="slds-button slds-button--neutral slds-button--small">Add</button>
+      </div>
+    </header>
+
+
+    <!-- CARD BODY = TABLE -->
+    <section class="slds-card__body">
+      <div class="slds-scrollable--x">
+        <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal">
+          <thead>
+            <tr class="slds-no-hover">
+              <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Name</th>
+              <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Title</th>
+              <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Email</th>
+              <th class="slds-text-heading--label slds-size--1-of-4" scope="col">Phone</th>
+              <th class="slds-row-action" scope="col">
+                <button class="slds-button slds-button--icon-border-filled slds-button--icon-border-small">
+                  <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Show More</span>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each contacts}}
+            <tr class="slds-hint-parent">
+              <td class="slds-size--1-of-4" data-label="Name">{{get this 'Name'}}</td>
+              <td class="slds-size--1-of-4" data-label="Title">{{get this 'Title'}}</td>
+              <td class="slds-size--1-of-4" data-label="Email">{{get this 'Email'}}</td>
+              <td class="slds-size--1-of-4" data-label="Phone">{{get this 'Phone'}}</td>
+              <td>
+                <button class="slds-button slds-button--icon-border-filled slds-button--icon-border-small">
+                  <svg aria-hidden="true" class="slds-button__icon slds-button__icon--hint slds-button__icon--small">
+                    <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                  </svg>
+                  <span class="slds-assistive-text">Show More</span>
+                </button>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+
+        </table>
+      </div>
+    </section>
+    <!-- / CARD BODY = SECTION + TABLE -->
+
+    <footer class="slds-card__footer">
+      <a href="#">View All</a>
+    </footer>
+  </div>
+
+</div>
+<!-- / MAIN CARD -->
+
+
+<!-- COMPACT CARD -->
+<div class="slds-col slds-p-left--large slds-size--4-of-12">
+
+  <div class="slds-card">
+
+    <header class="slds-card__header">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-lead slds-icon--small">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#opportunity"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <h3 class="slds-text-heading--small">Opportunities</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="slds-card__body">
+      {{#each opps}}
+      <div class="slds-tile">
+        <div class="slds-grid slds-grid--align-spread slds-has-flexi-truncate">
+          <p class="slds-tile__title slds-truncate"><a href="#">{{get this 'Name'}}</a></p>
+          <p>{{formatCurrency this 'Amount'}}</p>
+        </div>
+        <ul class="slds-tile__detail slds-list--horizontal slds-has-dividers slds-text-body--small">
+          <li class="slds-truncate slds-list__item">{{get this 'Probability'}}%</li>
+          <li class="slds-truncate slds-list__item">{{get this 'StageName'}}</li>
+        </ul>
+      </div>
+      {{/each}}
+    </section>
+
+    <footer class="slds-card__footer">
+      <a href="#">View All</a>
+    </footer>
+
+  </div>
+
+</div>
+<!-- / COMPACT CARD -->
+
+
+  </div>
+  <!-- / RELATED LIST CARDS -->
+
+</div>
+<!-- / PRIMARY CONTENT WRAPPER -->

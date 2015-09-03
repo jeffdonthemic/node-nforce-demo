@@ -1,0 +1,166 @@
+<nav class="slds-p-bottom--medium" role="navigation">
+  <p id="bread-crumb-label" class="slds-assistive-text">You are here:</p>
+  <ol class="slds-breadcrumb slds-list--horizontal" aria-labelledby="bread-crumb-label">
+    <li class="slds-list__item slds-text-heading--label"><a href="/">Salesforce Lightning Design System Web Demo</a></li>
+  </ol>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="slds-page-header" role="banner">
+
+  <!-- PAGE HEADER TOP ROW -->
+  <div class="slds-grid">
+
+    <!-- PAGE HEADER / ROW 1 / COLUMN 1 -->
+    <div class="slds-col">
+
+      <!-- HEADING AREA -->
+      <!-- MEDIA OBJECT = FIGURE + BODY -->
+      <div class="slds-media">
+
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+            <use xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"></use>
+          </svg>
+        </div>
+
+        <div class="slds-media__body">
+          <p class="slds-text-heading--label">Account</p>
+          <h1 class="slds-text-heading--medium">New Account</h1>
+        </div>
+
+      </div>
+      <!-- / MEDIA OBJECT -->
+      <!-- HEADING AREA -->
+
+    </div>
+    <!-- / PAGE HEADER / ROW 1 / COLUMN 1 -->
+
+  </div>
+  <!-- / PAGE HEADER TOP ROW -->
+
+</div>
+<!-- / PAGE HEADER -->
+
+<!-- PRIMARY CONTENT WRAPPER -->
+<div class="myapp">
+
+  <!-- CREATE NEW ACCOUNT -->
+    <div aria-labelledby="newaccountform">
+
+      <!-- BOXED AREA -->
+      <fieldset class="slds-box slds-theme--default">
+
+        <legend id="editaccountform" class="slds-text-heading--medium slds-p-vertical--medium">Edit Account</legend>
+
+        <!-- CREATE NEW ACCOUNT FORM -->
+        <form action="/" method="post" class="slds-form--stacked">
+
+          <div class="slds-grid">
+            <div class="slds-col--padded slds-size--1-of-2">
+
+              <div class="slds-form-element slds-is-required">
+                <label class="slds-form-element__label" for="name">Name</label>
+                <div class="slds-form-element__control">
+                  <input name="name" id="name" class="slds-input" type="text" required/>
+                  <span id="nameHelp" class="slds-form-element__help">You must enter an account name.</span>
+                </div>
+              </div>
+
+              <div class="slds-form-element">
+                <div class="slds-form-element">
+                  <label class="slds-form-element__label" for="industry">Industry</label>
+                  <div class="slds-form-element__control">
+                    <select name="industry" id="industry" class="slds-select">
+                      <option>Agriculture</option>
+                      <option>Apparel</option>
+                      <option>Banking</option>
+                      <option>Biotechnology</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="slds-col--padded slds-size--1-of-2">
+
+              <div class="slds-form-element slds-is-required">
+                <label class="slds-form-element__label" for="accountNumber">Account Number</label>
+                <div class="slds-form-element__control">
+                  <input name="accountNumber" id="accountNumber" class="slds-input" type="text" required/>
+                  <span id="helpAccountNumber" class="slds-form-element__help">This field is required.</span>
+                </div>
+              </div>
+
+              <fieldset class="slds-form-element slds-is-required">
+                <legend class="slds-form-element__label slds-form-element__label--top">Type</legend>
+                <div class="slds-form-element__control">
+                  <label class="slds-radio" for="prospect">
+                    <input type="radio" name="type" id="prospect" value="Prospect" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Prospect</span>
+                  </label>
+                  <label class="slds-radio" for="direct">
+                    <input type="radio" name="type" id="direct" value="Customer - Direct" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Customer - Direct</span>
+                  </label>
+                  <label class="slds-radio" for="channel">
+                    <input type="radio" name="type" id="channel" value="Customer - Channel" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Customer - Channel</span>
+                  </label>
+                  <label class="slds-radio" for="reseller">
+                    <input type="radio" name="type" id="reseller" value="Channel Partner / Reseller" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Channel Partner / Reseller</span>
+                  </label>
+                  <label class="slds-radio" for="installation">
+                    <input type="radio" name="type" id="installation" value="Installation Partner" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Installation Partner</span>
+                  </label>
+                  <label class="slds-radio" for="technology">
+                    <input type="radio" name="type" id="technology" value="Technology Partner" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Technology Partner</span>
+                  </label>
+                  <label class="slds-radio" for="other">
+                    <input type="radio" name="type" id="other" value="Other" required/>
+                    <span class="slds-radio--faux"></span>
+                    <span class="slds-form-element__label">Other</span>
+                  </label>
+                  <span id="helpType" class="slds-form-element__help">Ensure you choose the type of account.</span>
+                </div>
+              </fieldset>
+
+            </div>
+          </div>
+
+          <div class="slds-grid slds-p-top--small">
+            <div class="slds-col--padded">
+
+              <div class="slds-form-element">
+                <label class="slds-form-element__label" for="name">Description</label>
+                <div class="slds-form-element__control">
+                  <textarea name="description" id="description" class="slds-textarea"></textarea>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+          <button class="slds-button slds-button--brand slds-m-top--medium" type="submit">Save</button>
+        </form>
+        <!-- CREATE NEW ACCOUNT FORM -->
+
+      </fieldset>
+      <!-- / BOXED AREA -->
+
+    </div>
+    <!-- / CREATE NEW ACCOUNT -->
+
+</div>
+<!-- / PRIMARY CONTENT WRAPPER -->
