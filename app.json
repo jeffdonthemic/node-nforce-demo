@@ -4,7 +4,7 @@
   "description": "Simple NodeJS application using the Lightning Design System for CRUDing Salesforce Accounts.",
   "repository": "https://github.com/jeffdonthemic/node-nforce-demo",
   "website": "http://blog.jeffdouglas.com",
-  "logo": "https://raw.githubusercontent.com/jeffdonthemic/node-nforce-demo/master/public/images/salesforce-logo.png",
+  "logo": "https://raw.githubusercontent.com/jeffdonthemic/node-nforce-demo/master/public/salesforce-logo.png",
   "keywords": ["node", "salesforce", "nforce", "lightning", "lds", "slds", "lightningdesignsystem"],
   "env": {
     "USERNAME": {
