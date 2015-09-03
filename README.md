@@ -1,10 +1,16 @@
 # node-nforce-demo
 
-Simple node.js application for CRUDing salesforce.com Accounts using nforce.
+This is a sample account CRUD application using the [Lightning Design System](https://www.lightningdesignsystem.com) enabling you to easily build applications with the look and feel that is consistent with Salesforce Experience core features.
+
+Demo: [http://node-nforce-demo.herokuapp.com/](http://node-nforce-demo.herokuapp.com/)
+
+If you are not familiar with Lightning Design System, please see our [Trailhead module](https://developer.salesforce.com/trailhead/module/lightning_design_system) to get started with Visualforce. There is also a [tutorial](https://github.com/ForceDotComLabs/sldsx/blob/master/tutorial/tutorial.md) for using LDS with Lightning apps and components.
+
+The application uses [nforce](https://github.com/kevinohara80/nforce) for the Salesforce REST API, [handlebars](http://handlebarsjs.com/) for logic-less templating and [bluebird](https://github.com/petkaantonov/bluebird) for Promises.
 
 ## Deploy to Heroku
 
-Deploy this app to Heroku for free and have it up and running in a matter of minutes.
+Deploy this app to Heroku for free and have it up and running in a matter of minutes.  You'll need the `Consumer Key` and `Consumer Secret` from your org's Conected App for the setup process.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jeffdonthemic/node-nforce-demo)
 
@@ -17,37 +23,14 @@ git clone git@github.com:jeffdonthemic/node-nforce-demo.git
 cd nforce-node-demo
 npm install
 ```
-
-
-### Node Module Dependencies
-
-These will be automatically installed when you use any of the above *npm* installation methods above.
-
-1. [express](http://expressjs.com/) - framework
-2. [nforce](https://github.com/kevinohara80/nforce) - REST wrapper for force.com
-3. [async](https://github.com/caolan/async/) - asynchronous utility module
-4. [jade](http://jade-lang.com/) - the view engine
-
-### Running the Application Locally
-
-1. Open terminal and change directory to node-nforce-demo root
-2. `node app.js`
-3. Point your browser to: [http://localhost:3001](http://localhost:3001)
-
-### Deploying to Heroku
+Enter your Connected App settings and login credentials into `.env-sample` and rename the file to `.env`.
 
 ```
-heroku create
-heroku config:add CLIENT_ID=YOUR-SALESFORCE-CLIENT-ID
-heroku config:add CLIENT_SECRET=YOUR-SALESFORCE-SECRET
-heroku config:add USERNAME=YOUR-SALESFORCE-USERNAME
-heroku config:add PASSWORD=YOUR-SALESFORCE-PASSWORD-AND-TOKEN
-heroku open
+source .env
+npm start
 ```
 
-### Demo on Heroku
-
-This application is running on heroku at: [http://node-nforce-demo.herokuapp.com/](http://node-nforce-demo.herokuapp.com/)
+Point your browser to: [http://localhost:3001](http://localhost:3001) and experience the magic.
 
 ## Contributors
 * Jeff Douglas -> [jeffdonthemic](https://github.com/jeffdonthemic)
