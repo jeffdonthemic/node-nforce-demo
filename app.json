@@ -1,0 +1,23 @@
+
+{
+  "name": "NodeJS Demo for Saleforce with Lightning Design System",
+  "description": "Simple NodeJS application using the Lightning Design System for CRUDing Salesforce Accounts.",
+  "repository": "https://github.com/jeffdonthemic/node-nforce-demo",
+  "website": "http://blog.jeffdouglas.com",
+  "logo": "https://raw.githubusercontent.com/jeffdonthemic/node-nforce-demo/master/public/images/salesforce-logo.png",
+  "keywords": ["node", "salesforce", "nforce", "lightning", "lds", "slds", "lightningdesignsystem"],
+  "env": {
+    "USERNAME": {
+      "description": "Your Saleforce.com username"
+    },
+    "PASSWORD": {
+      "description": "Your Saleforce.com password and security token."
+    },
+    "CLIENT_ID": {
+      "description": "Your Connected App's Consumer Key."
+    },
+    "CLIENT_SECRET": {
+      "description": "Your Connected App's Consumer Secret."
+    }
+  }
+}
