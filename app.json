@@ -1,6 +1,6 @@
 
 {
-  "name": "Node Demo w/ Saleforce & SLDS",
+  "name": "Node Demo w/ Salesforce & SLDS",
   "description": "Simple NodeJS application using the Lightning Design System for CRUDing Salesforce Accounts.",
   "repository": "https://github.com/jeffdonthemic/node-nforce-demo",
   "website": "http://blog.jeffdouglas.com",
