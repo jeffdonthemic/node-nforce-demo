@@ -45,8 +45,22 @@ router.get('/:id', function(req, res, next) {
     org.getRecord({ type: 'account', id: req.params.id }),
     org.query({ query: "Select Id, Name, Email, Title, Phone From Contact where AccountId = '" + req.params.id + "'"}),
     org.query({ query: "Select Id, Name, StageName, Amount, Probability From Opportunity where AccountId = '" + req.params.id + "'"}),
-    function(account, contacts, opportunities) {
-        res.render('show', { record: account, contacts: contacts.records, opps: opportunities.records });
+    org.query({ query: "SELECT Id, Name, CreatedDate, ContentType From Attachment where ParentId = '" + req.params.id + "'"}),
+    org.query({ query: "SELECT Id, Name, CreatedDate, ContentType From Attachment where ParentId IN (Select Id FROM Contact WHERE AccountId = '" + req.params.id + "')"}),
+    function(account, contacts, opportunities, attAcc, attCon) {
+        res.render('show', { record: account, contacts: contacts.records, opps: opportunities.records, atts: Object.assign({}, attAcc.records, attCon.records)});
+    });
+});
+
+/* display attachment in browser if supported, otherwise download */
+router.get('/attachment/:id', function(req, res){
+  Promise.join(
+    org.getRecord({type: 'Attachment', id: req.params.id, fields: ['Id', 'ContentType', 'Name'], raw: true}),
+    org.getBody({id: req.params.id, type: 'Attachment'}),
+    function(attachment, body){
+      res.set('Content-Type', attachment.ContentType);
+      res.set('Content-Disposition', "inline; filename='" + attachment.Name + "'");
+      res.send(body);
     });
 });
 
