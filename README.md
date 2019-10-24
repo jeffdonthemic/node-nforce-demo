@@ -10,7 +10,7 @@ The application uses [nforce](https://github.com/kevinohara80/nforce) for the Sa
 
 ## Deploy to Heroku
 
-Deploy this app to Heroku for free and have it up and running in a matter of minutes.  You'll need the `Consumer Key` and `Consumer Secret` from your org's Conected App for the setup process.
+Deploy this app to Heroku for free and have it up and running in a matter of minutes.  You'll need the `Consumer Key` and `Consumer Secret` from your org's Connected App for the setup process.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/jeffdonthemic/node-nforce-demo)
 
