@@ -181,7 +181,7 @@
 <!-- / MAIN CARD -->
 
 
-<!-- COMPACT CARD -->
+<!-- COMPACT CARDS -->
 <div class="slds-col slds-p-left--large slds-size--4-of-12">
 
   <div class="slds-card">
@@ -220,8 +220,55 @@
 
   </div>
 
+  <div class="slds-card">
+
+    <header class="slds-card__header">
+      <div class="slds-media slds-media--center">
+        <div class="slds-media__figure">
+          <svg aria-hidden="true" class="slds-icon slds-icon-doctype-attachment slds-icon--small">
+            <use xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#attachment"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body">
+          <h3 class="slds-text-heading--small">Attachments</h3>
+        </div>
+      </div>
+    </header>
+
+    <section class="slds-card__body">
+      <table class="slds-table slds-table--bordered slds-max-medium-table--stacked-horizontal slds-no-row-hover">
+        <thead>
+          <tr>
+            <th class="slds-text-heading--label slds-size--1-of-2" scope="col">Name</th>
+            <th class="slds-text-heading--label slds-size--1-of-2" scope="col">Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each atts}}
+          <tr>
+            <td>
+              <a href="/attachment/{{get this 'Id'}}">
+                <svg aria-hidden="true" class="slds-icon slds-icon-doctype-{{attIcon this 'ContentType'}} slds-icon--small">
+                  <use xlink:href="/assets/icons/doctype-sprite/svg/symbols.svg#{{attIcon this 'ContentType'}}"></use>
+                </svg>
+              {{get this 'Name'}}
+            </a>
+          </td>
+            <td>{{formatDate this 'CreatedDate'}}</td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </section>
+
+    <footer class="slds-card__footer">
+      <a href="#">View All</a>
+    </footer>
+
+  </div>
+
 </div>
-<!-- / COMPACT CARD -->
+<!-- / COMPACT CARDS -->
 
 
   </div>
